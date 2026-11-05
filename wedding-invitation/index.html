@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f6efe4">
+  <title>دعوة زفاف | لينة ميار & إلياس</title>
+  <meta name="description" content="دعوتكم لمشاركتنا فرحة زفاف لينة ميار وإلياس يوم 19 ديسمبر 2026 في المنار - تبسة.">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700&display=swap');
+    :root {
+      --cream:#f7f0e5; --paper:#fffaf2; --gold:#b28a50; --gold-dark:#806039;
+      --ink:#493b2c; --muted:#857563; --line:#dfcba9;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0; color:var(--ink); font-family:"Cairo", sans-serif;
+      background:radial-gradient(ellipse at top, #fffdf8 0%, var(--cream) 70%);
+    }
+    .page { width:min(920px, calc(100% - 28px)); margin:28px auto; }
+    .invitation {
+      position:relative; overflow:hidden; text-align:center; padding:58px 22px 42px;
+      border:1px solid var(--line); outline:1px solid rgba(178,138,80,.35);
+      outline-offset:-9px; border-radius:18px;
+      background:linear-gradient(145deg, rgba(255,255,255,.88), rgba(255,250,242,.96));
+      box-shadow:0 18px 55px rgba(91,68,37,.10);
+    }
+    .invitation:before,.invitation:after {
+      content:"❧"; position:absolute; color:rgba(178,138,80,.35); font-family:serif;
+      font-size:100px; line-height:1;
+    }
+    .invitation:before { top:10px; right:18px; transform:rotate(-35deg); }
+    .invitation:after { bottom:4px; left:18px; transform:rotate(145deg); }
+    .eyebrow { color:var(--gold-dark); letter-spacing:2px; font-size:13px; }
+    .bismillah { font-family:"Amiri",serif; font-size:27px; color:var(--gold-dark); margin:8px 0 18px; }
+    h1 { font-family:"Amiri",serif; font-size:clamp(34px,7vw,58px); font-weight:700; line-height:1.35; margin:8px 0; color:var(--gold-dark); }
+    .intro { color:var(--muted); font-size:16px; margin:14px auto 22px; line-height:2; }
+    .names { display:flex; justify-content:center; align-items:center; gap:18px; flex-wrap:wrap; margin:18px 0; }
+    .name { font-family:"Amiri",serif; font-size:clamp(29px,6vw,43px); color:#70512f; }
+    .amp { font-family:serif; color:var(--gold); font-size:35px; }
+    .ornament { display:flex; align-items:center; gap:12px; width:min(340px,80%); margin:24px auto; color:var(--gold); }
+    .ornament:before,.ornament:after { content:""; height:1px; background:var(--line); flex:1; }
+    .details { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; width:min(600px,100%); margin:28px auto; }
+    .detail { border:1px solid var(--line); border-radius:13px; padding:16px 10px; background:rgba(247,240,229,.55); }
+    .detail .icon { font-size:22px; }
+    .detail b { display:block; color:var(--gold-dark); margin:4px 0; }
+    .detail span { font-size:14px; color:var(--muted); }
+    .count-title { color:var(--gold-dark); margin:28px 0 12px; font-weight:600; }
+    .countdown { display:flex; justify-content:center; gap:10px; direction:ltr; }
+    .count { min-width:66px; padding:10px 7px; border-radius:10px; background:#f2e7d5; border:1px solid #e4d2b5; }
+    .count strong { display:block; color:#76552e; font-size:25px; }
+    .count small { color:var(--muted); font-size:11px; }
+    .actions { display:flex; justify-content:center; flex-wrap:wrap; gap:10px; margin:25px 0 10px; }
+    .btn { display:inline-block; padding:11px 20px; border-radius:30px; text-decoration:none; font-weight:600; font-size:14px; transition:.2s; }
+    .primary { background:var(--gold-dark); color:white; }
+    .secondary { color:var(--gold-dark); border:1px solid var(--gold); background:transparent; }
+    .btn:hover { transform:translateY(-2px); }
+    .closing { font-family:"Amiri",serif; color:var(--gold-dark); font-size:23px; margin:24px 0 4px; }
+    .footer { text-align:center; color:#9b8973; font-size:12px; margin:18px 0 28px; }
+    .language { display:flex; justify-content:center; gap:8px; margin:0 0 14px; }
+    .language button { border:1px solid var(--line); background:#fffaf2; color:var(--gold-dark); padding:7px 15px; border-radius:20px; cursor:pointer; font-family:inherit; }
+    .language button.active { background:var(--gold-dark); color:white; }
+    body.fr { direction:ltr; }
+    body.fr .invitation { direction:ltr; }
+    body.fr .invitation:before { right:auto; left:18px; }
+    body.fr .invitation:after { left:auto; right:18px; }
+    @media(max-width:520px) {
+      .page { width:calc(100% - 16px); margin:12px auto; }
+      .invitation { padding:48px 15px 34px; }
+      .details { gap:8px; }
+      .detail { padding:13px 6px; }
+      .countdown { gap:6px; }
+      .count { min-width:58px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="language" aria-label="اختيار اللغة">
+      <button id="arBtn" class="active" type="button">العربية</button>
+      <button id="frBtn" type="button">Français</button>
+    </div>
+
+    <section class="invitation">
+      <div class="eyebrow" data-ar="بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ" data-fr="AU NOM D’ALLAH, LE TOUT MISÉRICORDIEUX">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ</div>
+      <div class="bismillah" data-ar="﴿ وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنْفُسِكُمْ أَزْوَاجًا ﴾" data-fr="« Parmi Ses signes : Il a créé de vous, pour vous, des épouses… »">﴿ وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنْفُسِكُمْ أَزْوَاجًا ﴾</div>
+      <h1 data-ar="دعوة لحضور حفل زفاف" data-fr="Invitation au mariage">دعوة لحضور حفل زفاف</h1>
+      <p class="intro" data-ar="بكل الفرح والسرور، يشرفنا دعوتكم لمشاركتنا أجمل لحظات العمر، والاحتفال بزفاف ابنتنا الغالية." data-fr="C’est avec une immense joie que nous vous invitons à partager avec nous ce moment précieux et à célébrer le mariage de notre chère fille.">بكل الفرح والسرور، يشرفنا دعوتكم لمشاركتنا أجمل لحظات العمر، والاحتفال بزفاف ابنتنا الغالية.</p>
+
+      <div class="names">
+        <div class="name"> لينا  </div>
+        <div class="amp">&</div>
+        <div class="name"> إلياس  </div>
+      </div>
+
+      <div class="ornament">✦</div>
+      <div class="details">
+        <div class="detail">
+          <div class="icon">📅</div>
+          <b data-ar="التاريخ" data-fr="Date">التاريخ</b>
+          <span data-ar="السبت 19 ديسمبر 2026" data-fr="Samedi 19 décembre 2026">السبت 19 ديسمبر 2026</span>
+        </div>
+        <div class="detail">
+          <div class="icon">📍</div>
+          <b data-ar="المكان" data-fr="Lieu">المكان</b>
+          <span data-ar="المنار - تبسة" data-fr="El Manar – Tébessa">المنار - تبسة</span>
+        </div>
+      </div>
+
+      <div class="count-title" data-ar="لم يبقَ على فرحتنا سوى" data-fr="Le grand jour dans">لم يبقَ على فرحتنا سوى</div>
+      <div class="countdown" aria-live="polite">
+        <div class="count"><strong id="days">--</strong><small data-ar="يوم" data-fr="Jours">يوم</small></div>
+        <div class="count"><strong id="hours">--</strong><small data-ar="ساعة" data-fr="Heures">ساعة</small></div>
+        <div class="count"><strong id="minutes">--</strong><small data-ar="دقيقة" data-fr="Minutes">دقيقة</small></div>
+        <div class="count"><strong id="seconds">--</strong><small data-ar="ثانية" data-fr="Secondes">ثانية</small></div>
+      </div>
+
+      <div class="actions">
+        <a class="btn primary" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=المنار+تبسة" data-ar="📍 عرض الموقع" data-fr="📍 Voir l’emplacement">📍 عرض الموقع</a>
+        <a class="btn secondary" id="rsvp" href="#" data-ar="تأكيد الحضور عبر واتساب" data-fr="Confirmer par WhatsApp">تأكيد الحضور عبر واتساب</a>
+      </div>
+      <div class="closing" data-ar="حضوركم يُتمّ فرحتنا، وبدعواتكم تكتمل سعادتنا" data-fr="Votre présence fera notre bonheur, vos prières notre joie.">حضوركم يُتمّ فرحتنا، وبدعواتكم تكتمل سعادتنا</div>
+    </section>
+    <div class="footer" data-ar="نسأل الله أن يبارك لهما ويجمع بينهما في خير" data-fr="Qu’Allah bénisse leur union et les comble de bonheur.">نسأل الله أن يبارك لهما ويجمع بينهما في خير</div>
+  </main>
+
+  <script>
+    // ضع رقم واتساب صاحب الدعوة هنا مع مفتاح الدولة، دون + أو مسافات.
+    // مثال الجزائر: 213XXXXXXXXX
+    const WHATSAPP_NUMBER = "213XXXXXXXXX";
+
+    const weddingDate = new Date(2026, 11, 19, 14, 0, 0);
+    const $ = (id) => document.getElementById(id);
+
+    function updateCountdown() {
+      const diff = weddingDate.getTime() - Date.now();
+      if (diff <= 0) {
+        ["days","hours","minutes","seconds"].forEach(id => $(id).textContent = "0");
+        document.querySelector(".count-title").textContent =
+          document.body.classList.contains("fr") ? "C’est le grand jour !" : "اليوم هو يوم فرحتنا!";
+        return;
+      }
+      const values = {
+        days: Math.floor(diff / 86400000),
+        hours: Math.floor((diff % 86400000) / 3600000),
+        minutes: Math.floor((diff % 3600000) / 60000),
+        seconds: Math.floor((diff % 60000) / 1000)
+      };
+      Object.entries(values).forEach(([id, value]) => $(id).textContent = String(value).padStart(2, "0"));
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    function setLanguage(lang) {
+      const isFrench = lang === "fr";
+      document.body.classList.toggle("fr", isFrench);
+      document.documentElement.lang = isFrench ? "fr" : "ar";
+      document.documentElement.dir = isFrench ? "ltr" : "rtl";
+      document.querySelectorAll("[data-ar]").forEach(el => {
+        el.textContent = isFrench ? el.dataset.fr : el.dataset.ar;
+      });
+      $("arBtn").classList.toggle("active", !isFrench);
+      $("frBtn").classList.toggle("active", isFrench);
+    }
+    $("arBtn").addEventListener("click", () => setLanguage("ar"));
+    $("frBtn").addEventListener("click", () => setLanguage("fr"));
+
+    $("rsvp").addEventListener("click", function(event) {
+      if (!/^213\d{9}$/.test(WHATSAPP_NUMBER)) {
+        event.preventDefault();
+        alert("عدّل رقم واتساب في ملف index.html أولاً. Modifiez d’abord le numéro WhatsApp dans index.html.");
+        return;
+      }
+      const message = "السلام عليكم، أؤكد حضوري لحفل زفاف لينة ميار وإلياس يوم 19 ديسمبر 2026.";
+      this.href = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
+    });
+  </script>
+</body>
+</html>
